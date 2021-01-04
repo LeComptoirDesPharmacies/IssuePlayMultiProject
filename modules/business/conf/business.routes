@@ -1,0 +1,12 @@
+# Application
+GET         /common/index                                         controllers.business.Application.index()
+GET         /ping                                                 controllers.business.Application.ping()
+GET         /loaderio-*token/                                     controllers.business.Application.loaderIo(token:String)
+
+# Map static resources from the /publicfront folder to the /assets URL path
+#GET         /assets/common/*file                   controllers.business.Assets.versioned(path="/public", file: Asset)
+GET         /common/css/*file                                     controllers.business.CommonAssets.commonCss(path="/public/common/css", file: Asset)
+GET         /common/js/*file                                      controllers.business.CommonAssets.commonJs(path="/public/common/js", file: Asset)
+GET         /common/img/*file                                     controllers.business.CommonAssets.commonImg(path="/public/common/images", file: Asset)
+GET         /common/lib/*file                                     controllers.business.CommonAssets.commonLib(path="/public/lib", file: Asset)
+GET         /common/custom-lib/*file                              controllers.business.CommonAssets.commonCustomLib(path="/public/common/lib", file: Asset)
