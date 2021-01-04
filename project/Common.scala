@@ -8,7 +8,7 @@ object Common {
   def settings (theName: String) = Seq(
     name := theName,
     version := "1.0.55",
-    scalaVersion := "2.13.4"
+    scalaVersion := "2.12.11"
   )
 
   val commonDependencies = Seq(
